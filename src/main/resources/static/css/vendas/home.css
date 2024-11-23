@@ -1,0 +1,67 @@
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+}
+
+table th, table td {
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    text-align: left;
+
+
+}
+
+table th {
+    background-color: #34495e;
+    color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+#createClient {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#createClient:hover {
+    background-color: #27ae60;
+}
+
+.details {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    margin: auto; /* Centraliza dentro do contêiner */
+    display: block; /* Necessário para funcionar com margin:auto em botões */
+
+
+
+}
+
+.details:hover {
+    background-color: #2980b9;
+}
+
+td {
+    text-align: center; /* Centraliza horizontalmente */
+    vertical-align: middle; /* Centraliza verticalmente */
+}
+
+

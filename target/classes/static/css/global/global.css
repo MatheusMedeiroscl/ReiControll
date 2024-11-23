@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+   
+    display: grid;
+    grid-template-rows: auto 1fr; /* HomeBar em cima e o resto ocupa o restante */
+    grid-template-columns: 200px 1fr; /* SideBar com largura fixa */
+    grid-template-areas:
+        "sideBar homeBar"
+        "sideBar table";
+    height: 100vh; /* Ocupa a altura total da viewport */
+}
+
+#sideBar {
+    grid-area: sideBar;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+
+    display: flex; /* Ativa Flexbox */
+    flex-direction: column; /* Organiza elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+#logo {
+    width: 80%; /* Ajusta o tamanho do logo */
+    max-width: 150px; /* Limita o tamanho máximo */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+#homeBar {
+    grid-area: homeBar;
+    color: black;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+#table {
+    grid-area: table;
+    background-color: white;
+    overflow: auto; /* Garantir que conteúdo não ultrapasse */
+    padding: 20px;
+}
+
+#sideBar .logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#sideBar .navBar {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#sideBar .navItem {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+#sideBar .navItem:hover {
+    text-decoration: underline;
+}
+
+#details > a,
+#btncreate > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#btncreate {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btncreate:hover {
+    background-color: #27ae60;
+}
+
+/* Botões de ação */
+.actions > #btnDelete,
+.actions > #btnUpdate {
+    height: 40px;
+    width: 40%;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#btnDelete {
+    background-color: #FF0000;
+}
+
+#btnUpdate {
+    background-color: #00FF55;
+}
+
+#btnDelete:hover {
+    background-color: #e60000;
+}
+
+#btnUpdate:hover {
+    background-color: #00cc44;
+}

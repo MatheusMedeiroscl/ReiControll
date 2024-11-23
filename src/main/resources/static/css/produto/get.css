@@ -1,0 +1,124 @@
+
+/* Data Product Section */
+#dataProd{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+#infoProd {
+    margin-left: 40px;
+    background-color: #f2f2f2;
+  
+    width: 48%;
+    height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards dentro da seção */
+.cardInfo {
+    padding: 10px;
+    
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "infos none"
+        "actions none";
+    gap: 20px;
+}
+
+.titleCard {
+    padding: 10px;
+    background-color: #34495e;
+    color: #fff;
+
+    border-radius: 8px;
+
+}
+
+.titleProd {
+    grid-area: title;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.moreInfos {
+    grid-area: infos;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cardInfo > .actions {
+    grid-area: actions;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
+/* Formulário de atualização */
+.cardform {
+
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "form form"
+        "actions none";
+    gap: 20px;
+}
+
+form {
+    width: 100%;
+    grid-area: form;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+form label {
+
+    width: 100%;
+    font-size: 1em;
+    color: #34495e;
+}
+
+form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 80%;
+}
+
+form input:focus {
+    border-color: #4CAF50;
+}
+
+.actions button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+
+
+}
+
+.cardform > .actions{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    
+}

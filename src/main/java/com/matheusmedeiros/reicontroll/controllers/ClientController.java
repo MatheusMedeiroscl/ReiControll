@@ -15,6 +15,7 @@ import java.util.List;
 @RequestMapping(value = "/client")
 public class ClientController {
 
+
     @Autowired
     private ClientRepository repository;
     Client client;
