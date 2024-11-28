@@ -6,6 +6,7 @@
     <title>Clientes</title>
     <link rel="stylesheet" href="../../css/global/global.css">
     <link rel="stylesheet" href="../../css/cliente/create.css">
+    
 </head>
 <body>
     <section id="sideBar">
@@ -35,33 +36,37 @@
 
         <div class="cardform">
 
-            <form action="">
-                <label for="nameClient">Nome(Proprietário): <br>
-                    <input type="text" name="nameClient" id="nameClient">
+            <form action="" id="createClient">
+                <label for="clientName">Nome (Proprietário): <br>
+                    <input type="text" name="clientName" id="clientName">
                 </label>
-
-                <label for="nameCompany">Nome(Estabelecimento): <br>
-                    <input type="text" name="nameCompany" id="nameCompany">
+            
+                <label for="companyName">Nome (Estabelecimento): <br>
+                    <input type="text" name="companyName" id="companyName">
                 </label>
-
+            
                 <label for="cnpj">CNPJ: <br>
                     <input type="text" name="cnpj" id="cnpj">
                 </label>
-
+            
                 <label for="adress">Endereço: <br>
                     <input type="text" name="adress" id="adress">
                 </label>
-                
+            
+                <div class="actions">
+                    <button type="submit" id="btnCreateClient"><h3>Create</h3></button>
+                </div>
             </form>
 
 
-            <div class="actions">
-                <button id="btnCreateClient"><h3>Create</h3></button>
-            </div>
+      
         </div>
         </section>
 
      
     </section>
+    <script src="../../js/client/create.js"></script>   
 </body>
+
+
 </html>

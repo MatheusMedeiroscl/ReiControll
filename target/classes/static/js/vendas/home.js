@@ -1,22 +1,29 @@
+const URL = "http://localhost:9090/buy";
+
+
+/* --MOSTRA TODOS AS VENDAS CADASTRADAS-- */
+//carrega a função ao carregar a página
 document.addEventListener("DOMContentLoaded", function () {
-    const URL = "http://localhost:9090/buy";
+
     const tableBody = document.querySelector("#vendasTable");
 
-    if (!tableBody) {
-        console.error("Elemento '#vendasTable' não encontrado no DOM.");
-        return;
-    }
-
+    // função assicrona para pegar e exibir dados    
     async function getAll() {
         try {
+
+            // realiza a requisição            
             const response = await fetch(URL);
 
+            //valida a requisão
             if (!response.ok) {
                 throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
             } else {
+
+                //recolhe o JSON solicitado 
                 const data = await response.json();
                 console.log(data);
 
+                //manipula o JSON
                 data.map((purchased) => {
                     const row = document.createElement("tr");
 

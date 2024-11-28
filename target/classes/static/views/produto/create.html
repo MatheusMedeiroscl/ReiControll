@@ -34,13 +34,13 @@
             <h2 class="titleCard">Criar  novo cliente</h2>
 
         <div class="cardform">
-            <form action="">
-                <label for="nameProd">Nome: <br>
-                    <input type="text" name="nameProd" id="nameProd">
+            <form action="" id="createProd">
+                <label for="prodName">Nome: <br>
+                    <input type="text" name="prodName" id="prodName">
                 </label>
 
-                <label for="typeProd">Tipo de produto: <br>
-                    <input type="text" name="typeProd" id="typeProd">
+                <label for="prodType">Tipo de produto: <br>
+                    <input type="text" name="prodType" id="prodType">
                 </label>
 
                 <label for="storage">Estoque: <br>
@@ -51,16 +51,19 @@
                     <input type="text" name="valid" id="valid">
                 </label>
                 
+                <div class="actions">
+                    <button  type="submit" id="btnCreateProd"><h3>Create</h3></button>
+                </div>
             </form>
 
 
-            <div class="actions">
-                <button id="btnCreateProd"><h3>Create</h3></button>
-            </div>
+   
         </div>
         </section>
 
      
     </section>
+
+    <script src="../../js/produtos/create.js"></script>
 </body>
 </html>

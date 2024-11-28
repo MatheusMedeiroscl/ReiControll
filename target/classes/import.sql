@@ -3,20 +3,6 @@ INSERT INTO administrator(name, password, email) VALUES ('Raquel', '12345678', '
 
 INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Renato', 'R&R', '1324262524', 'rua linda');
 INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Geraldo', 'mercado SuperStar', '1324262524', 'rua feia');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Renato', 'R&R', '1324262524', 'rua linda');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Geraldo', 'mercado SuperStar', '1324262524', 'rua feia');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Renato', 'R&R', '1324262524', 'rua linda');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Geraldo', 'mercado SuperStar', '1324262524', 'rua feia');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Renato', 'R&R', '1324262524', 'rua linda');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Geraldo', 'mercado SuperStar', '1324262524', 'rua feia');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Renato', 'R&R', '1324262524', 'rua linda');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Geraldo', 'mercado SuperStar', '1324262524', 'rua feia');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Renato', 'R&R', '1324262524', 'rua linda');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Geraldo', 'mercado SuperStar', '1324262524', 'rua feia');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Renato', 'R&R', '1324262524', 'rua linda');
-INSERT INTO client(owner_name, company_name, CNPJ, adress) VALUES ('Geraldo', 'mercado SuperStar', '1324262524', 'rua feia');
-
-
 
 
 INSERT INTO products(name, product_type, storage, validity) VALUES ('Trufa Brigadeiro', 'trufa', '59', '25/12');

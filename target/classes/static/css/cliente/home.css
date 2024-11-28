@@ -29,7 +29,7 @@ table tr:nth-child(odd) {
 
 
 
-#details {
+.details {
     background-color: #3498db;
     color: white;
     border: none;
@@ -44,7 +44,7 @@ table tr:nth-child(odd) {
 
 }
 
-#details:hover {
+.details:hover {
     background-color: #2980b9;
 }
 

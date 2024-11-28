@@ -21,33 +21,34 @@
 
     <section id="homeBar">
         <h1 id="title">Venda</h1>
-        
-
-        
     </section>
 
-    
-    
     <section id="dataVend">
-    
         <section id="infoVend">
-            <h2 class="titleCard">Criar  novo cliente</h2>
+            <h2 class="titleCard">Registrar nova venda</h2>
 
-        <div class="cardform">
-            <form action="">
-                <label for="dataVend">Data da venda: <br>
-                    <input type="text" name="dataVend" id="dataVend ">
-                </label>                
-            </form>
+            <div class="cardform">
+                <form id="createVenda">
 
+                    <label for="data">Data da venda: <br>
+                        <input type="text"  id="data"> 
+                    </label>
+                    <label for="clientID">id Cliente: <br>
+                        <input type="text"  id="clientID"> <!-- Corrigido: removido o espaço após o id -->
+                    </label>
 
-            <div class="actions">
-                <button id="btnCreateVend"><h3>Create</h3></button>
+                    <label for="prodID">id produto: <br>
+                        <input type="text"  id="prodID"> <!-- Corrigido: removido o espaço após o id -->
+                    </label>
+
+                    <div class="actions">
+                        <button type="submit" id="btnCreateVend"><h3>Create</h3></button>
+                    </div>
+                </form>
             </div>
-        </div>
         </section>
-
-     
     </section>
+
+    <script src="../../js/vendas/create.js" defer></script>
 </body>
 </html>
