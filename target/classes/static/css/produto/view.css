@@ -1,6 +1,6 @@
 
 /* Data Product Section */
-#dataProd{
+#cardArea{
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -8,7 +8,7 @@
     padding: 20px;
 }
 
-#infoProd {
+#infoCard, #updateCard {
     margin-left: 40px;
     background-color: #f2f2f2;
   
@@ -19,7 +19,7 @@
 }
 
 /* Cards dentro da seção */
-.cardInfo {
+.infoArea {
     padding: 10px;
     
     display: grid;
@@ -53,7 +53,7 @@
     margin-bottom: 10px;
 }
 
-.cardInfo > .actions {
+.infoArea > .actions {
     grid-area: actions;
     display: flex;
     justify-content: left;
@@ -121,4 +121,12 @@ form input:focus {
     align-items: center;
 
     
+}
+
+.actions{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
 }

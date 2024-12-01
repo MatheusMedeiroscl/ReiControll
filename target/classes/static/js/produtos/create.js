@@ -45,8 +45,7 @@ form.addEventListener("submit", (e) =>{
         const result = await response.json();
         console.log("Produto criado com sucesso:", result);
         alert("Produto criado com sucesso!");
-        form.reset(); // Reseta o formulário após o envio
-
+        window.location.href = "../../views/produto/home.html";
 
         }catch(error){
             console.log("erro ao criar produto", error)

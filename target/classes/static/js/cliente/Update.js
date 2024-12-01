@@ -14,11 +14,7 @@ async function loadClientData(id) {
         const response = await fetch(`${URL}/${id}`); // Supondo que essa URL retorna os dados do cliente
         const data = await response.json();
 
-        // Preenche os campos com os dados existentes
-        client.value = data.owner_name;
-        company.value = data.company_name;
-        cnpjUpdate.value = data.cnpj;
-        addressUpdate.value = data.address;
+   
     } catch (error) {
         console.error("Erro ao carregar os dados do cliente:", error);
     }
@@ -52,6 +48,8 @@ form.addEventListener("submit", (e) => {
             const data = await response.json();
             console.log(data);
             alert("Usuário Atualizado com sucesso!");
+            location.reload(); // Isso vai atualizar a página e carregar os dados mais recentes
+
         } catch (error) {
             console.error("Erro na requisição:", error);
         }

@@ -1,8 +1,8 @@
 
-const clientName = document.getElementById("txtClientName");
-const companyName = document.getElementById("txtCompanyName");
-const cnpj = document.getElementById("txtCNPJ");
-const address = document.getElementById("txtAddress");
+const txtClientName = document.getElementById("txtClientName");
+const txtCompanyName = document.getElementById("txtCompanyName");
+const txtCNPJ = document.getElementById("txtCNPJ");
+const txtAddress = document.getElementById("txtAddress");
 
 
 
@@ -22,10 +22,10 @@ const address = document.getElementById("txtAddress");
             const data = await response.json();
             console.log(data); 
 
-           clientName.innerText = data.owner_name;
-           companyName.innerText = data.company_name;
-           cnpj.innerHTML = `<strong>CNPJ: </strong> ${data.cnpj}`;
-           address.innerHTML = `<strong>Endereço: </strong> ${data.adress}`;
+            txtClientName.innerText = data.owner_name;
+            txtCompanyName.innerText = data.company_name;
+            txtCNPJ.innerHTML = `<strong>CNPJ: </strong> ${data.cnpj}`;
+            txtAddress.innerHTML = `<strong>Endereço: </strong> ${data.adress}`;
             
 
 

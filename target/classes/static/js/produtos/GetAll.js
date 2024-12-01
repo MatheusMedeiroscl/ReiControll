@@ -1,29 +1,28 @@
 const URL = "http://localhost:9090/product";
 
-
 /* --MOSTRA TODOS OS PRODUTOS CADASTRADOS-- */
-//carrega a função ao carregar a página
+// carrega a função ao carregar a página
 document.addEventListener("DOMContentLoaded", function () {
 
     const tableBody = document.querySelector("#ProductTable");
 
-    // função assicrona para pegar e exibir dados
+    // função assíncrona para pegar e exibir dados
     async function getAll() {
         try {
 
             // realiza a requisição
             const response = await fetch(URL);
 
-            //valida a requisição
+            // valida a requisição
             if (!response.ok) {
                 throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
             } else {
 
-                //recolhe o JSON solicitado 
+                // recolhe o JSON solicitado 
                 const data = await response.json();
                 console.log(data);
 
-                //manipula os dados do JSON
+                // manipula os dados do JSON
                 data.forEach((product) => {
                     const row = document.createElement("tr");
 
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 detailButtons.forEach(button => {
                     button.addEventListener("click", (event) => {
                         const productId = event.target.getAttribute("data-id");
-                        window.location.href = `get.html?id=${productId}`;
+                        window.location.href = `view.html?id=${productId}`;  // Alterado para view.html
                     });
                 });
             }

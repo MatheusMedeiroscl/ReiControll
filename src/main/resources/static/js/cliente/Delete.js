@@ -26,7 +26,6 @@ const btnDelete = document.getElementById("btnDelete")
                     console.log(data);
                     alert("Usuário deletado");
                     window.location.href = "../../views/cliente/home.html";
-            
                 });
 
 

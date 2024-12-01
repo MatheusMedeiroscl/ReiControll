@@ -50,17 +50,30 @@ public class ProductController {
 
     @PutMapping( value = "/{id}")
     private ResponseEntity<?> update(@PathVariable Long id, @RequestBody Products updateProducts){
-        products = repository.findById(id).orElse(null);
+        //busca produto pelo ID
+        Products product = repository.findById(id).orElse(null);
 
-        if (products == null){
-            return ResponseEntity.notFound().build();
-        }else {
-            products.setProduct_type(updateProducts.getProduct_type());
-            products.setValidity(updateProducts.getValidity());
-            products.setStorage(updateProducts.getStorage());
-            products.setName(updateProducts.getName());
+        if (product == null){
+            return ResponseEntity.notFound().build(); // Se o cliente não for encontrado
+        }else{
+            // Atualiza apenas os campos que foram modificados
+            if(updateProducts.getName() != null){
+                product.setName(updateProducts.getName());
+            }
+            if(updateProducts.getProduct_type() != null){
+                product.setProduct_type(updateProducts.getProduct_type());
+            }
+            if(updateProducts.getStorage() != null){
+                product.setStorage(updateProducts.getStorage());
+            }
+            if(updateProducts.getValidity() != null){
+                product.setValidity(updateProducts.getValidity());
+            }
 
-            return ResponseEntity.ok().body(products);
+            repository.save(product);
+
+            return ResponseEntity.ok(product); // Retorna a resposta com os dados atualizados
+
         }
     }
 
