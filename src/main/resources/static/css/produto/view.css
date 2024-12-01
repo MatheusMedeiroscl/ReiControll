@@ -1,6 +1,6 @@
 
-/* Data Venda Section */
-#dataVend{
+/* Data Product Section */
+#cardArea{
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -8,18 +8,18 @@
     padding: 20px;
 }
 
-#infoVend {
+#infoCard, #updateCard {
     margin-left: 40px;
     background-color: #f2f2f2;
   
     width: 48%;
-    height: 50%;
+    height: 80%;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Cards dentro da seção */
-.cardInfo {
+.infoArea {
     padding: 10px;
     
     display: grid;
@@ -41,7 +41,7 @@
 
 }
 
-.titleVend {
+.titleProd {
     grid-area: title;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -53,7 +53,7 @@
     margin-bottom: 10px;
 }
 
-.cardInfo > .actions {
+.infoArea > .actions {
     grid-area: actions;
     display: flex;
     justify-content: left;
@@ -121,4 +121,12 @@ form input:focus {
     align-items: center;
 
     
+}
+
+.actions{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
 }

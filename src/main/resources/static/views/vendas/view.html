@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendasView</title>
+    <link rel="stylesheet" href="../../css/global/global.css">
+    <link rel="stylesheet" href="../../css/vendas/view.css">
+</head>
+<body>
+    <section id="sideBar">
+        <img src="../../css/global/img/logo.png" alt="Logo" id="logo">
+        <h2 id="sideBarTitle">ReiControll</h2>
+
+        <ul class="navBar">
+            <li><a href="../cliente/home.html" class="navItem">Clientes</a></li>
+            <li><a href="../produto/home.html" class="navItem">Produtos</a></li>
+            <li><a href="home.html" class="navItem">Vendas</a></li>
+        </ul>
+    </section>
+
+    <section id="homeBar">
+        <h1 id="title">Vendas</h1> 
+    </section>
+
+    
+    <!--CARD DE VENDAS-->
+    <section id="cardArea">
+
+        <!--CARD DE INFORMAÇÕES DO PRODUTO-->
+        <section id="infoCard">
+            <h2 class="titleCard">Dados da Venda</h2>
+
+                <div class="infoArea">
+                    <h2 class="titleVend">
+                        <p id="txtdata"></p>
+                    </h2>
+
+                    <div class="moreInfos">
+                        <p id="txtClient"></p>
+                        <p id="txtProd"></p>
+                    </div>
+
+                    <div class="actions">
+                        <button id="btnDelete"><h3>Delete</h3></button>
+                    </div>
+                </div>
+        </section>
+
+        <!--CARD DE UPDATE DE VENDA-->
+        <section id="updateCard">
+            <h2 class="titleCard">Update de dados</h2>
+
+                <div class="cardform">
+
+                    <form id="updateVenda">
+                        <label>Data da venda: <br>
+                            <input type="text" id="dataVenda"></label>                
+  
+                        <div class="actions">
+                                <button id="btnUpdate"><h3>Update</h3></button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+        </section>
+
+     
+    </section>
+
+<script src="../../js/vendas/GetById.js" defer></script>   
+<script src="../../js/vendas/Delete.js"></script>   
+<script src="../../js/vendas/Update.js"></script>    
+</body>
+</html>

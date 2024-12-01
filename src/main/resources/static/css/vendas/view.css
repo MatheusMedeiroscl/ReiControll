@@ -1,25 +1,36 @@
 
-/* Data Vendas Section */
-#dataVend {
+/* Data Venda Section */
+#cardArea{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     width: 100%;
-    height: 130vh;
-    padding: 10px;
+    padding: 20px;
 }
 
-#infoVend {
+#infoCard, #updateCard {
     margin-left: 40px;
     background-color: #f2f2f2;
   
     width: 48%;
-    height: 40%;
+    height: 50%;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Cards dentro da seção */
+.infoArea {
+    padding: 10px;
+    
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "infos none"
+        "actions none";
+    gap: 20px;
+}
 
 .titleCard {
     padding: 10px;
@@ -30,29 +41,26 @@
 
 }
 
- 
+.titleVend {
+    grid-area: title;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-.actions > #btnCreateVend    {
-    height: 40px;
-    width: 40%;
-    border: none;
-    border-radius: 25px;
-    color: #fff;
-    font-size: 1em;
-    padding: 10px;
-    cursor: pointer;
+.moreInfos {
+    grid-area: infos;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.infoArea > .actions {
+    grid-area: actions;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 
-
-#btnCreateVend {
-    background-color: #00FF55;
-}
-
-
-#btnCreateVend:hover {
-    background-color: #00cc44;
-}
 
 /* Formulário de atualização */
 .cardform {
@@ -106,7 +114,7 @@ form input:focus {
 
 }
 
- .actions{
+.cardform > .actions{
     width: 100%;
     display: flex;
     justify-content: left;
@@ -114,3 +122,12 @@ form input:focus {
 
     
 }
+.actions{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    
+}
+

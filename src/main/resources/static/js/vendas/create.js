@@ -43,7 +43,7 @@ form.addEventListener("submit", (e) => {
             const result = await response.json();
             alert("Venda cadastrada com sucesso!");
             console.log("Venda cadastrada com sucesso:", result);
-            form.reset(); // Reseta o formulário
+            window.location.href = "../../views/vendas/home.html";
         } catch (error) {
             console.error("Erro ao criar a venda:", error);
             alert("Ocorreu um erro ao criar a venda. Tente novamente.");

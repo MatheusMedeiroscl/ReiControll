@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProdutoView</title>
+    <link rel="stylesheet" href="../../css/global/global.css">
+    <link rel="stylesheet" href="../../css/produto/view.css">
+</head>
+<body>
+    <section id="sideBar">
+        <img src="../../css/global/img/logo.png" alt="Logo" id="logo">
+        <h2 id="sideBarTitle">ReiControll</h2>
+
+        <ul class="navBar">
+            <li><a href="../cliente/home.html" class="navItem">Clientes</a></li>
+            <li><a href="home.html" class="navItem">Produtos</a></li>
+            <li><a href="../vendas/home.html" class="navItem">Vendas</a></li>
+        </ul>
+    </section>
+
+    <section id="homeBar">
+        <h1 id="title">Produtos</h1>
+    </section>
+
+    
+    <!--CARD DE PRODUTO-->
+    <section id="cardArea">
+
+        <!--CARD DE INFORMAÇÕES DO PRODUTO-->
+        <section id="infoCard">
+            <h2 class="titleCard">Dados do produto</h2>
+
+                <div class="infoArea">
+                    <h2 class="titleProd">
+                        <p id="txtProdName"></p>
+                        <p id="txtProdtype"></p>
+                    </h2>
+
+                    <div class="moreInfos">
+                        <p id="txtStorage"></p>
+                        <p id="txtValid"></p>
+                    </div>
+
+                    <div class="actions">
+                        <button id="btnDelete"><h3>Delete</h3></button>
+                    </div>
+                </div>
+        </section>
+
+        <!--CARD DE UPDATE DO PRODUTO-->
+        <section id="updateCard">
+            <h2 class="titleCard">Update de dados</h2>
+
+            <div class="cardform">
+
+                <form id="updateProduct">
+                    <label>Nome: <br>
+                        <input type="text" id="prodName"></label>
+
+                    <label>Tipo de produto: <br>
+                        <input type="text" id="prodType"></label>
+
+                    <label >Estoque: <br>
+                        <input type="text" id="storage"></label>
+
+                    <label>Validade: <br>
+                        <input type="text" id="valid"></label>
+
+                    <div class="actions">
+                        <button id="btnUpdate"><h3>Update</h3></button>
+                    </div>                
+                </form>
+
+
+
+            </div>
+        </section>
+
+     
+    </section>
+
+<script src="../../js/produtos/GetById.js" defer></script>   
+<script src="../../js/produtos/Delete.js"></script>   
+<script src="../../js/produtos/Update.js"></script> 
+</body>
+</html>

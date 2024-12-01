@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 detailButtons.forEach(button => {
                     button.addEventListener("click", (event) => {
                         const productId = event.target.getAttribute("data-id");
-                        window.location.href = `get.html?id=${productId}`;
+                        window.location.href = `view.html?id=${productId}`;  // Alterado para view.html
                     });
                 });
             }

@@ -49,16 +49,18 @@ public class BuyController {
 
     @PutMapping( value = "/{id}")
     private ResponseEntity<?> update(@PathVariable Long id, @RequestBody Buy updatePorchase){
-        buy = repository.findById(id).orElse(null);
+       //Busca da compra pelo ID
+        Buy buy = repository.findById(id).orElse(null);
 
         if (buy == null){
-            return ResponseEntity.notFound().build();
-        }else {
-                    // Só é autorizado atualizar o dia da compra
-            buy.setDay_purchase(updatePorchase.getDay_purchase());
-            repository.save(buy); // Salvar as alterações
+            return ResponseEntity.notFound().build(); // Se a compra não for encontrado
+        }else{
+            if (updatePorchase.getDay_purchase() != null){
+                buy.setDay_purchase((updatePorchase.getDay_purchase()));
+            }
+            repository.save(buy);
 
-            return ResponseEntity.ok().body(buy);
+            return ResponseEntity.ok(buy);
         }
     }
 

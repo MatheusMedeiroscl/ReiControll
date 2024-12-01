@@ -1,11 +1,3 @@
-const URL = "http://localhost:9090/buy";
-
-
-//GET ID FROM URL 
-const urlSearchParams = new URLSearchParams(window.location.search); // entrega um obj com os parametros da url
-const postId = urlSearchParams.get("id");
-console.log(postId)
-
 
 const txtdata = document.getElementById("txtdata");
 const txtClient = document.getElementById("txtClient");
@@ -14,8 +6,9 @@ const txtProd = document.getElementById("txtProd");
 
 
 
+/*CARREGA  VENDAS */
 
-    async function getClient(id) {
+async function getVenda(id) {
     try {
 
         const response = await fetch( `${URL}/${id}`)
@@ -37,10 +30,10 @@ const txtProd = document.getElementById("txtProd");
 
         }
     } catch (error) {
-        console.log("erro ao procurar o client")
-        alert("erro ao procurar o client")
+        console.log("erro ao procurar as Vendas")
+        alert("erro ao procurar as Vendas")
 
     }
 }
 
-getClient(postId)   
+getVenda(postId)   
