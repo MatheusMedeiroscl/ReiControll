@@ -1,7 +1,6 @@
 package com.matheusmedeiros.reicontroll.controllers;
 
 
-import com.matheusmedeiros.reicontroll.entitites.Buy;
 import com.matheusmedeiros.reicontroll.entitites.Client;
 import com.matheusmedeiros.reicontroll.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/client")
+@CrossOrigin(origins = "*", allowedHeaders = "*") // Permitir qualquer origem e cabeçalho
 public class ClientController {
 
 
@@ -47,25 +47,43 @@ public class ClientController {
     }
 
 
-    /*UPDATE DOS DADOS DE UM CLIENTE*/
     @PutMapping(value = "/{id}")
-    private ResponseEntity<?> update(@PathVariable Long id, @RequestBody Client updateClient){
-        client = repository.findById(id).orElse(null);
+    private ResponseEntity<?> update(@PathVariable Long id, @RequestBody Client updateClient) {
+        // Busca o cliente pelo ID
+        Client client = repository.findById(id).orElse(null);
 
-        if (client == null){
-            return ResponseEntity.notFound().build();
-        }else {
-            client.setCompany_name(updateClient.getCompany_name());
-            client.setOwner_name(updateClient.getOwner_name());
-            client.setAdress(updateClient.getAdress());
-            client.setCNPJ(updateClient.getCNPJ());
+        if (client == null) {
+            return ResponseEntity.notFound().build(); // Se o cliente não for encontrado
+        } else {
+            // Atualiza apenas os campos que foram modificados
 
+            // Verifica se o nome da empresa foi modificado
+            if (updateClient.getCompany_name() != null) {
+                client.setCompany_name(updateClient.getCompany_name());
+            }
+
+            // Verifica se o nome do proprietário foi modificado
+            if (updateClient.getOwner_name() != null) {
+                client.setOwner_name(updateClient.getOwner_name());
+            }
+
+            // Verifica se o endereço foi modificado
+            if (updateClient.getAdress() != null) {
+                client.setAdress(updateClient.getAdress());
+            }
+
+            // Verifica se o CNPJ foi modificado
+            if (updateClient.getCNPJ() != null) {
+                client.setCNPJ(updateClient.getCNPJ());
+            }
+
+            // Salva as mudanças no banco de dados
             repository.save(client);
-            return ResponseEntity.ok(client);
 
-
+            return ResponseEntity.ok(client); // Retorna a resposta com os dados atualizados
         }
     }
+
 
     /*DELETE DE UM CLIENTE*/
     @DeleteMapping(value = "/{id}")

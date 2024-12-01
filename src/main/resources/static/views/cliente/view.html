@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClienteView</title>
+    <link rel="stylesheet" href="../../css/global/global.css">
+    <link rel="stylesheet" href="../../css/cliente/view.css">
+</head>
+<body>
+    <section id="sideBar">
+        <img src="../../css/global/img/logo.png" alt="Logo" id="logo">
+        <h2 id="sideBarTitle">ReiControll</h2>
+
+        <ul class="navBar">
+            <li><a href="home.html" class="navItem">Clientes</a></li>
+            <li><a href="../produto/home.html" class="navItem">Produtos</a></li>
+            <li><a href="../vendas/home.html" class="navItem">Vendas</a></li>
+        </ul>
+    </section>
+
+    <section id="homeBar">
+        <h1 id="title">Clientes</h1>
+    </section>
+
+    <!--CARD DE CLIENTE-->
+    <section id="cardArea">
+
+        <!--CARD DE INFORMAÇÕES DO CLIENTE-->
+        <section id="infoCard">
+            <h2 class="titleCard">Dados do Cliente</h2>
+
+            <div class="infoArea">
+                <h2 class="titleClient">
+                    <p id="txtCompanyName"></p>
+                    <p id="txtClientName"></p>
+                </h2>
+
+                <div class="moreInfos">
+                    <p id="txtCNPJ"></p>
+                    <p id="txtAddress"></p>
+                </div>
+
+                <div class="actions">
+                    <button id="btnDelete"><h3>Delete</h3></button>
+                </div>
+            </div>
+        </section>
+
+        <!--CARD DE UPDATE DO CLIENTE-->
+        <section id="updateCard">
+            <h2 class="titleCard">Update de dados</h2>
+
+            <div class="cardform">
+
+                <form id="updateClient">
+                    <label>Nome(Proprietário): <br>
+                        <input type="text" id="clientName"></label>
+
+                    <label>Nome(Estabelecimento): <br>
+                         <input type="text" id="companyName"></label>
+
+                    <label>CNPJ: <br>
+                        <input type="text" id="cnpj"></label>
+
+                    <label >Endereço: <br>
+                        <input type="text" id="address"></label> 
+
+                    <div class="actions">
+                         <button id="btnUpdate"><h3>Update</h3></button>
+                    </div>
+                </form>
+
+
+
+            </div>
+        </section>
+
+     
+    </section>
+
+    <script src="../../js/cliente/GetById.js" defer></script>   
+    <script src="../../js/cliente/Delete.js"></script>   
+    <script src="../../js/cliente/Update.js"></script>  
+</body>
+</html>

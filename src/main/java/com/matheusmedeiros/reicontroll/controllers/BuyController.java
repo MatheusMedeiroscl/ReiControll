@@ -12,6 +12,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/buy") // CAMINHO DA REQUISIÇÃO
+@CrossOrigin(origins = "*", allowedHeaders = "*") // Permitir qualquer origem e cabeçalho
+
 public class BuyController {
     @Autowired
     BuyRepository repository;

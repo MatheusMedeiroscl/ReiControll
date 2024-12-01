@@ -1,7 +1,7 @@
 const URL = "http://localhost:9090/client";
 
 /* --CRIAR NOVOS CLIENTES-- */
-const form = document.querySelector("#createClient");
+const form = document.getElementById("createClient");
 const clientName = document.getElementById("clientName");
 const companyName = document.getElementById("companyName");
 const cnpj = document.getElementById("cnpj");
@@ -47,7 +47,7 @@ form.addEventListener("submit", (e) => {
             const result = await response.json();
             console.log("Cliente criado com sucesso:", result);
             alert("Cliente criado com sucesso!");
-            form.reset(); // Reseta o formulário após o envio
+            window.location.href = "../../views/cliente/home.html";
 
         } catch (error) {
             console.error("Erro ao criar cliente:", error);

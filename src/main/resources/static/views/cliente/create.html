@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
+    <title>CreateCliente</title>
     <link rel="stylesheet" href="../../css/global/global.css">
     <link rel="stylesheet" href="../../css/cliente/create.css">
     
@@ -22,51 +22,38 @@
 
     <section id="homeBar">
         <h1 id="title">Clientes</h1>
-        
-
-        
     </section>
 
+    <section id="clientCard">
     
-    
-    <section id="dataClient">
-    
-        <section id="infoClient">
-            <h2 class="titleCard">Adicionar Cliente</h2>
+        <section id="createCard">
+                <h2 class="titleCard">Adicionar Cliente</h2>
+            <div class="cardform">
 
-        <div class="cardform">
+                <form id="createClient">
+                    <label for=>Nome (Proprietário): <br>
+                    <input type="text" id="clientName"></label>
+            
+                    <label >Nome (Estabelecimento): <br>
+                        <input type="text" id="companyName"></label>
+            
+                    <label >CNPJ: <br>
+                        <input type="text" id="cnpj"></label>
+            
+                    <label>Endereço: <br>
+                        <input type="text" id="adress"></label>
 
-            <form action="" id="createClient">
-                <label for="clientName">Nome (Proprietário): <br>
-                    <input type="text" name="clientName" id="clientName">
-                </label>
-            
-                <label for="companyName">Nome (Estabelecimento): <br>
-                    <input type="text" name="companyName" id="companyName">
-                </label>
-            
-                <label for="cnpj">CNPJ: <br>
-                    <input type="text" name="cnpj" id="cnpj">
-                </label>
-            
-                <label for="adress">Endereço: <br>
-                    <input type="text" name="adress" id="adress">
-                </label>
-            
-                <div class="actions">
-                    <button type="submit" id="btnCreateClient"><h3>Create</h3></button>
-                </div>
-            </form>
+                    <div class="actions">
+                        <button id="btnCreateClient"><h3>Create</h3></button>
+                    </div>
+                </form>
 
 
       
-        </div>
+            </div>
         </section>
-
-     
     </section>
-    <script src="../../js/client/create.js"></script>   
+
+<script src="../../js/cliente/Create.js"></script>   
 </body>
-
-
 </html>

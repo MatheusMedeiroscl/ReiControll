@@ -1,4 +1,4 @@
-const URL = "http://localhost:9090/client";
+const URL = "http://localhost:9090/product";
 
 
 //GET ID FROM URL 
@@ -7,10 +7,10 @@ const postId = urlSearchParams.get("id");
 console.log(postId)
 
 
-const clientName = document.getElementById("txtnameClient");
-const companyName = document.getElementById("txtnameCompany");
-const cnpj = document.getElementById("txtCNPJ");
-const adress = document.getElementById("txtAdress");
+const txtnameProd = document.getElementById("txtnameProd");
+const nameTipoProd = document.getElementById("nameTipoProd");
+const txtEstoque = document.getElementById("txtEstoque");
+const txtValidade = document.getElementById("txtValidade");
 
 
 
@@ -30,10 +30,10 @@ const adress = document.getElementById("txtAdress");
             const data = await response.json();
             console.log(data); 
 
-           clientName.innerText = data.owner_name;
-           companyName.innerText = data.company_name;
-           cnpj.innerHTML = `<strong>CNPJ: </strong> ${data.cnpj}`;
-           adress.innerHTML = `<strong>Endereço: </strong> ${data.adress}`;
+            txtnameProd.innerText = data.name;
+            nameTipoProd.innerText = data.product_type;
+            txtEstoque.innerHTML = `<strong>Estoque: </strong> ${data.storage}`;
+            txtValidade.innerHTML = `<strong>Validade: </strong> ${data.validity}`;
             
 
 

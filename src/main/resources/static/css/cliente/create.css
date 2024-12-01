@@ -1,6 +1,6 @@
 
 /* Data Client Section */
-#dataClient {
+#clientCard {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -8,7 +8,7 @@
     padding: 10px;
 }
 
-#infoClient {
+#createCard {
     margin-left: 40px;
     background-color: #f2f2f2;
   
