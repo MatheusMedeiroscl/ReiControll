@@ -30,7 +30,7 @@ Bem-vindo ao **ReiControl**, um projeto de faculdade que se tornou um efiênte g
 ### Passos:  
 1. Clone o repositório:  
    ```bash  
-   git clone https://github.com/seu-usuario/ReiControl.git  
+   git clone https://github.com/MatheusMedeiroscl/ReiControl.git  
    ```  
 2. Configure o arquivo `application.properties` com suas credenciais do MySQL.  
 3. Execute o comando para rodar a aplicação:  
@@ -39,7 +39,7 @@ Bem-vindo ao **ReiControl**, um projeto de faculdade que se tornou um efiênte g
    ```  
 4. Acesse o sistema no navegador:  
    ```
-   http://localhost:9090
+   Acess usando o front-end direto na web (ex: LiveServer)
    ```  
 
 ---
